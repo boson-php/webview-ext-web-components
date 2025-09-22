@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Boson\WebView\Api\WebComponents\Internal;
 
-use Boson\WebView\Api\Data\DataExtensionInterface;
-use Boson\WebView\Api\Scripts\ScriptsExtensionInterface;
+use Boson\WebView\Api\Data\DataRetrieverInterface;
+use Boson\WebView\Api\Scripts\ScriptsApiInterface;
 use Boson\WebView\Api\WebComponents\Component\HasAttributesInterface;
 use Boson\WebView\Api\WebComponents\Component\HasEventListenersInterface;
 use Boson\WebView\Api\WebComponents\Component\HasLifecycleCallbacksInterface;
@@ -40,8 +40,8 @@ final class WebViewComponentInstances
     public function __construct(
         private readonly WebView $webview,
         private readonly WebComponentInstantiatorInterface $instantiator,
-        private readonly DataExtensionInterface $data,
-        private readonly ScriptsExtensionInterface $scripts,
+        private readonly DataRetrieverInterface $data,
+        private readonly ScriptsApiInterface $scripts,
     ) {}
 
     /**

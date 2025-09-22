@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Boson\WebView\Api\WebComponents\Context\Internal;
 
 use Boson\Shared\Marker\BlockingOperation;
-use Boson\WebView\Api\Data\DataExtensionInterface;
 use Boson\WebView\Api\Data\DataRetrieverInterface;
 use JetBrains\PhpStorm\Language;
 use React\Promise\PromiseInterface;
@@ -22,7 +21,7 @@ final readonly class ComponentDataRetriever extends ComponentAwareBuilder implem
      */
     public function __construct(
         string $id,
-        private DataExtensionInterface $data,
+        private DataRetrieverInterface $data,
     ) {
         parent::__construct($id);
     }

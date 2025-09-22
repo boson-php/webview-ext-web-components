@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Boson\WebView\Api\WebComponents\Context\Internal;
 
 use Boson\WebView\Api\Scripts\ScriptEvaluatorInterface;
-use Boson\WebView\Api\Scripts\ScriptsExtensionInterface;
+use Boson\WebView\Api\Scripts\ScriptsApiInterface;
 use JetBrains\PhpStorm\Language;
 
 /**
@@ -20,7 +20,7 @@ final readonly class ComponentEvaluator extends ComponentAwareBuilder implements
      */
     public function __construct(
         string $id,
-        private ScriptsExtensionInterface $scripts,
+        private ScriptsApiInterface $scripts,
     ) {
         parent::__construct($id);
     }
